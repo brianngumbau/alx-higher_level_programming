@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Modele for class Square that inherits from rectangle"""
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -63,7 +64,7 @@ class Square(Rectangle):
 
         Raises:
             TypeError: if amount of consecutive non-keyword or keyword
-                arguments given not between 1 and 4 
+                arguments given not between 1 and 4
             KeyError: if keyword not among superclass and super-superclass
                 getters
 
@@ -93,18 +94,18 @@ class Square(Rectangle):
             raise TypeError('Square.update() takes 1 to 4 keyword,' +
                             ' or 1 to 4 non-keyword arguments')
         else:
-            for l, arg in enumerate(args):
-                if l == 0:
+            for k, arg in enumerate(args):
+                if k == 0:
                     if self.id != arg:
                         temp = self.id
                         self.id = arg
                         Base._Base__assigned_ids.remove(temp)
                         Base._Base__assigned_ids.add(arg)
-                elif l == 1:
+                elif k == 1:
                     self.size = arg
-                elif l == 2:
+                elif k == 2:
                     self.x = arg
-                elif l == 3:
+                elif k == 3:
                     self.y = arg
 
     def to_dictionary(self):
