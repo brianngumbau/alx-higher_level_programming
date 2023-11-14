@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """Class rectangle that inherits from base
 
-    superclass '__init__' 
+    superclass '__init__'
 
     Args:
         width : x dimension of rectangle
@@ -145,7 +145,7 @@ class Rectangle(Base):
 
         Attributes:
             display : ACSII art for rectangle
-            __display (str): final value of `display` saved to instance 
+            __display (str): final value of `display` saved to instance
             for unit testing
         """
         display = ''
