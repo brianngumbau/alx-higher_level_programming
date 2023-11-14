@@ -34,7 +34,8 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Class method that writes JSON representation of list_objs to a file"""
+        """Class method that writes JSON representation of
+        list_objs to a file"""
         if list_objs is not None:
             list_objs = [i.to_dictionary() for i in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as k:
@@ -109,7 +110,7 @@ class Base:
         from random import randrange
         turtle.Screen().colormode(255)
         for n in list_rectangles + list_squares:
-            l = turtle.Turtle()
+            t = turtle.Turtle()
             l.color((randrange(255), randrange(255), randrange(255)))
             l.pensize(1)
             l.penup()
