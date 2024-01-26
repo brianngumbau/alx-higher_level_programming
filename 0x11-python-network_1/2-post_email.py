@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Takes in a URL and an email, sends a POST request and displays the body of the respons"""
+"""Takes in a URL and an email, sends a POST request and displays
+the body of the respons"""
 
 import sys
 import urllib.parse
