@@ -8,6 +8,6 @@ request(API_URL + episodeNum, function (err, response, body) {
   if (err) {
     console.log(err);
   }
-	const json = JSON.parse(body);
-	console.log(json.title);
+    const json = JSON.parse(body);
+    console.log(json.title);
 });
